@@ -2110,15 +2110,15 @@ sehingga penerapan pada a,b yaitu :
 \)</span><span class="math notranslate nohighlight">\(\sqrt{2}\)</span>$
 = 1,414214
 sehingga</p>
-<img src="image-20240321-035120.png" width="" align="" /><p>dist3 berasal dari nilai terbesar ke 3, kemudian mencari data apa saja yang masuk(kurang dari sama dengan nilai dist3)</p>
-<img src="image-20240321-043231.png" width="" align="" /><p>Setelah mengetahui neighborsnya maka dilakukan pencaria nilai Reachability Distance dengan rumus :
+<img src="image-20240321-131901.png" width="" align="" /><p>dist3 berasal dari nilai terbesar ke 3, kemudian mencari data apa saja yang masuk(kurang dari sama dengan nilai dist3)</p>
+<img src="image-20240321-131949.png" width="" align="" /><p>Setelah mengetahui neighborsnya maka dilakukan pencaria nilai Reachability Distance dengan rumus :
 $<span class="math notranslate nohighlight">\(\text{reachdist}(p,o) = \max\{k\text{-distance}(o), \text{euclidean\_distance}(p, o)\}\)</span>$</p>
 <ul class="simple">
 <li><p>reachdist(p,o) adalah jarak reachability dari titik p ke tetangga o.</p></li>
 <li><p>k-distance(o) adalah nilai k-distance dari titik o.</p></li>
 <li><p>euclidean_distance(p, o) adalah jarak Euclidean antara titik p dan tetangga o.</p></li>
 </ul>
-<img src="image-20240321-044913.png" width="" align="" /><p>Kemudian mencari nilai Local Reachability Density (LRD) dengan rumus :
+<img src="image-20240321-132427.png" width="" align="" /><p>Kemudian mencari nilai Local Reachability Density (LRD) dengan rumus :
 $<span class="math notranslate nohighlight">\( LRD(p) = \frac{n}{\sum_{o \in N(p)} \text{reachdist}(p,o)} \)</span>$</p>
 <ul class="simple">
 <li><p>LRD(p) adalah nilai Local Reachability Density dari titik ( p ).</p></li>
@@ -2126,7 +2126,7 @@ $<span class="math notranslate nohighlight">\( LRD(p) = \frac{n}{\sum_{o \in N(p
 <li><p>N(p) adalah himpunan tetangga-tetangga dari titik ( p ).</p></li>
 <li><p>reachdist(p,o) adalah jarak reachability dari titik ( p ) ke setiap tetangga ( o ) dalam ( N(p) ).</p></li>
 </ul>
-<img src="image-20240321-051259.png" width="" align="" /><p>dan setelah itu mencari Local Outlier Factor (LOF) dengan rumus :
+<img src="image-20240321-133310.png" width="" align="" /><p>dan setelah itu mencari Local Outlier Factor (LOF) dengan rumus :
 $<span class="math notranslate nohighlight">\( LOF(p) = \frac{\sum_{o \in N(p)} \frac{LRD(o)}{LRD(p)}}{k} \)</span>$</p>
 <ul class="simple">
 <li><p>LOF(p) adalah nilai Local Outlier Factor dari titik ( p ).</p></li>
@@ -2135,7 +2135,7 @@ $<span class="math notranslate nohighlight">\( LOF(p) = \frac{\sum_{o \in N(p)} 
 <li><p>LRD(o) adalah nilai LRD dari setiap tetangga ( o ) dalam ( N(p) ).</p></li>
 <li><p>k adalah jumlah tetangga ke-n.</p></li>
 </ul>
-<img src="image-20240321-052205.png" width="" align="" /></section>
+<img src="image-20240321-133349.png" width="" align="" /></section>
 <section id="menghitung-menggunakan-python-scikit-learn">
 <h3>Menghitung menggunakan python(Scikit Learn)<a class="headerlink" href="#menghitung-menggunakan-python-scikit-learn" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">

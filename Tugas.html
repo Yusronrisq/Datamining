@@ -394,6 +394,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-local-outlier-factor-pada-data-iris">Implementasi Local Outlier Factor pada data iris</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-gaussian-bayes">Metode gaussian bayes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">pengertian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-menggunakan-sklearn">Implementasi menggunakan sklearn</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-manual-menggunakan-excel">Perhitungan manual menggunakan excel</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -427,7 +433,7 @@ adalah tahapan pemahaman yang mendalam tentang data yang akan dianalisis, sehing
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sukses
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mysql-connector-python in c:\users\acer\appdata\local\programs\python\python312\lib\site-packages (8.3.0)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 23.2.1 -&gt; 24.0
@@ -443,7 +449,11 @@ adalah tahapan pemahaman yang mendalam tentang data yang akan dianalisis, sehing
 
 <span class="c1"># koneksi ke mysql</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-<p>disini saya sembunyikan koneksi</p>
+    <span class="n">host</span> <span class="o">=</span> <span class="s1">&#39;mohammadilhamyusronrisqi088-mohammadilhamyusronrisqi088.a.aivencloud.com&#39;</span><span class="p">,</span>
+    <span class="n">port</span> <span class="o">=</span> <span class="mi">14305</span><span class="p">,</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="s1">&#39;avnadmin&#39;</span><span class="p">,</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;AVNS_WWfj_XdD5SWZ92zK8vz&#39;</span><span class="p">,</span>
+    <span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;defaultdb&#39;</span>
 <span class="p">)</span>
 
 <span class="c1"># kode sql untuk membaca data dengan panda</span>
@@ -1652,7 +1662,11 @@ kemudian saya akan melakukan pengujian dengan sql</p></li>
 
 <span class="c1"># Koneksi ke database MySQL</span>
 <span class="n">connection</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-<p>disini saya sembunyikan koneksi</p>
+    <span class="n">host</span><span class="o">=</span><span class="s1">&#39;mohammadilhamyusronrisqi088-mohammadilhamyusronrisqi088.a.aivencloud.com&#39;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">14305</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s1">&#39;avnadmin&#39;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s1">&#39;AVNS_WWfj_XdD5SWZ92zK8vz&#39;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s1">&#39;defaultdb&#39;</span>
 <span class="p">)</span>
 
 <span class="c1"># Baca data dari database</span>
@@ -1734,7 +1748,11 @@ Model accuracy: 96.55%
 
 <span class="c1"># Koneksi ke database MySQL</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-<p>disini saya sembunyikan koneksi</p>
+    <span class="n">host</span><span class="o">=</span><span class="s1">&#39;mohammadilhamyusronrisqi088-mohammadilhamyusronrisqi088.a.aivencloud.com&#39;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">14305</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s1">&#39;avnadmin&#39;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s1">&#39;AVNS_WWfj_XdD5SWZ92zK8vz&#39;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s1">&#39;defaultdb&#39;</span>
 <span class="p">)</span>
 
 <span class="c1"># Baca data dari database</span>
@@ -1787,7 +1805,11 @@ Model accuracy: 96.55%
 
 <span class="c1"># Membuka kembali koneksi ke database MySQL</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-<p>disini saya sembunyikan koneksi</p>
+    <span class="n">host</span><span class="o">=</span><span class="s1">&#39;mohammadilhamyusronrisqi088-mohammadilhamyusronrisqi088.a.aivencloud.com&#39;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">14305</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s1">&#39;avnadmin&#39;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s1">&#39;AVNS_WWfj_XdD5SWZ92zK8vz&#39;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s1">&#39;defaultdb&#39;</span>
 <span class="p">)</span>
 
 <span class="c1"># Mengubah data di database MySQL</span>
@@ -2041,12 +2063,20 @@ koneksikan terlebih dahulu ke masing masing sql, kemudian disatukan</p>
 
 <span class="c1"># Koneksi ke MySQL</span>
 <span class="n">mysql_connection</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-<p>disini saya sembunyikan koneksi</p>
+    <span class="n">host</span><span class="o">=</span><span class="s1">&#39;mohammadilhamyusronrisqi088-mohammadilhamyusronrisqi088.a.aivencloud.com&#39;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">14305</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s1">&#39;avnadmin&#39;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s1">&#39;AVNS_WWfj_XdD5SWZ92zK8vz&#39;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s1">&#39;defaultdb&#39;</span>
 <span class="p">)</span>
 
 <span class="c1"># Koneksi ke PostgreSQL</span>
 <span class="n">pg_connection</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-    <p>disini saya sembunyikan koneksi</p>
+    <span class="n">host</span><span class="o">=</span><span class="s1">&#39;yusron-mohammadilhamyusronrisqi088.a.aivencloud.com&#39;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">14305</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s1">&#39;avnadmin&#39;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s1">&#39;AVNS_kSS72VZFoaxQgDRgkMp&#39;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s1">&#39;defaultdb&#39;</span>
 <span class="p">)</span>
 
 <span class="c1"># Query untuk MySQL</span>
@@ -2122,7 +2152,7 @@ koneksikan terlebih dahulu ke masing masing sql, kemudian disatukan</p>
 <h3>Menghitung manual Locak Outlier Factor<a class="headerlink" href="#menghitung-manual-locak-outlier-factor" title="Link to this heading">#</a></h3>
 <p>Data contoh data dengan tipe numeric 3 fitur jumlah data 10 k=3 p=2 (euclidian dista</p>
 <img src="untitled/image-20240321-031813.png" width="" align="" /><p>Untuk rumusnya yaitu
-<span class="math notranslate nohighlight">\( d =\sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}} \)</span><span class="math notranslate nohighlight">\(
+$<span class="math notranslate nohighlight">\( d =\sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}} \)</span><span class="math notranslate nohighlight">\(
 untuk penerapannya yaitu disini karena terdapat 3 k maka timbah z, jadi
 \)</span><span class="math notranslate nohighlight">\(\sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}+(z_{2}-z_{1})^{2}}\)</span><span class="math notranslate nohighlight">\(
 sehingga penerapan pada a,b yaitu :
@@ -2229,7 +2259,11 @@ LOF scores:
 
 <span class="c1"># Koneksi ke database MySQL</span>
 <span class="n">connection</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-<p>disini saya sembunyikan koneksi</p>
+    <span class="n">host</span><span class="o">=</span><span class="s1">&#39;mohammadilhamyusronrisqi088-mohammadilhamyusronrisqi088.a.aivencloud.com&#39;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">14305</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s1">&#39;avnadmin&#39;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s1">&#39;AVNS_WWfj_XdD5SWZ92zK8vz&#39;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s1">&#39;defaultdb&#39;</span>
 <span class="p">)</span>
 
 <span class="k">if</span> <span class="n">connection</span><span class="p">:</span>
@@ -2282,6 +2316,178 @@ LOF scores:
 </div>
 </div>
 <p>ditunjukkan bahwa ada outlier (-1) di baris 6 dan 10</p>
+</section>
+</section>
+<section id="metode-gaussian-bayes">
+<h2>Metode gaussian bayes<a class="headerlink" href="#metode-gaussian-bayes" title="Link to this heading">#</a></h2>
+<section id="pengertian">
+<h3>pengertian<a class="headerlink" href="#pengertian" title="Link to this heading">#</a></h3>
+<p>Gaussian Naive Bayes adalah algoritma pembelajaran mesin yang digunakan untuk klasifikasi. Ini adalah variasi dari algoritma Naive Bayes yang mengasumsikan bahwa data yang diambil dari setiap fitur mengikuti distribusi Gaussian (normal). Ini bekerja dengan menghitung probabilitas bahwa suatu instance tertentu termasuk dalam setiap kelas berdasarkan fitur-fiturnya.</p>
+<p>Pada dasarnya, algoritma ini bekerja dengan menghitung rata-rata dan standar deviasi dari setiap fitur untuk setiap kelas. Kemudian, ketika datang saatnya untuk mengklasifikasikan instance baru, algoritma menggunakan distribusi Gaussian untuk menghitung probabilitas bahwa instance tersebut termasuk dalam setiap kelas berdasarkan fitur-fiturnya.</p>
+<p>Ini adalah algoritma yang sangat berguna untuk klasifikasi ketika fitur-fiturnya terdistribusi secara normal. Namun, perlu diingat bahwa “naive” dalam nama algoritma ini merujuk pada asumsi yang sangat sederhana bahwa fitur-fitur tersebut saling independen, yang mungkin tidak selalu terjadi dalam data dunia nyata.</p>
+</section>
+<section id="implementasi-menggunakan-sklearn">
+<h3>Implementasi menggunakan sklearn<a class="headerlink" href="#implementasi-menggunakan-sklearn" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">mysql.connector</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+
+<span class="c1"># koneksi ke database MySQL</span>
+<span class="n">sql_connection</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+    <span class="n">host</span><span class="o">=</span><span class="s1">&#39;mohammadilhamyusronrisqi088-mohammadilhamyusronrisqi088.a.aivencloud.com&#39;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">14305</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s1">&#39;avnadmin&#39;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s1">&#39;AVNS_WWfj_XdD5SWZ92zK8vz&#39;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s1">&#39;defaultdb&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Membaca data dari database menggunakan Pandas</span>
+<span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM navbay&quot;</span>
+<span class="n">data_iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">sql_connection</span><span class="p">)</span>
+
+<span class="c1"># Menghapus kolom Id, dikarenakan kurang relevan</span>
+<span class="n">data_iris</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Id&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># memisahkan atribut dan label</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">data_iris</span><span class="p">[[</span><span class="s1">&#39;SepalLengthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;SepalWidthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;PetalLengthCm&#39;</span><span class="p">,</span> <span class="s1">&#39;PetalWidthCm&#39;</span> <span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data_iris</span><span class="p">[</span><span class="s1">&#39;Species&#39;</span><span class="p">]</span>
+ 
+<span class="c1"># Membagi dataset menjadi data latih &amp; data uji</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+ 
+<span class="c1"># membuat model Gaussian naive bayes</span>
+<span class="n">gnb_model</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+ 
+<span class="c1"># Melatih model dengan menggunakan data latih</span>
+<span class="n">gnb_model</span> <span class="o">=</span> <span class="n">gnb_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Evaluasi Model</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">gnb_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+ 
+<span class="n">acc_secore</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">y_test</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Accuracy: &#39;</span><span class="p">,</span> <span class="n">acc_secore</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_80/2502131930.py:18: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  data_iris = pd.read_sql(sql_query, sql_connection)
+Accuracy:  0.967
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kode di atas bertujuan untuk
+Praproses Data: Kolom ‘Id’ dihapus dari DataFrame karena kurang relevan untuk analisis.
+Memisahkan Atribut dan Label: Atribut (fitur) dan label dipisahkan. Atributnya adalah ‘SepalLengthCm’, ‘SepalWidthCm’, ‘PetalLengthCm’, dan ‘PetalWidthCm’, sedangkan labelnya adalah ‘Species’.
+Pembagian Data: Data dibagi menjadi data latih dan data uji menggunakan fungsi train_test_split() dari sklearn. Data uji disetel sebesar 20% dari total data.
+Pembuatan Model Gaussian Naive Bayes: Model Gaussian Naive Bayes dibuat menggunakan fungsi GaussianNB() dari sklearn.
+Pelatihan Model: Model diperbarui dengan data latih menggunakan metode fit().
+Evaluasi Model: Model yang dilatih dievaluasi dengan memprediksi label untuk data uji menggunakan metode predict() dan menghitung akurasi prediksi dengan menggunakan fungsi accuracy_score() dari sklearn.
+Output Akurasi: Akurasi hasil prediksi dicetak ke konsol.
+untuk akurasinya disini dikatakan baik karena ada di atas 0,85</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">gnb_model</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">]]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Iris-versicolor&#39;]
+/shared-libs/python3.9/py/lib/python3.9/site-packages/sklearn/base.py:450: UserWarning: X does not have valid feature names, but GaussianNB was fitted with feature names
+  warnings.warn(
+</pre></div>
+</div>
+</div>
+</div>
+<p>kode diatas digunakan untuk melakukan prediksi kelas (species) berdasarkan atribut (fitur) yang diberikan pada model Gaussian Naive Bayes yang telah dilatih sebelumnya.
+dan untuk hasilnya diketahui yaitu iris versicolor</p>
+</section>
+<section id="perhitungan-manual-menggunakan-excel">
+<h3>Perhitungan manual menggunakan excel<a class="headerlink" href="#perhitungan-manual-menggunakan-excel" title="Link to this heading">#</a></h3>
+<p>Langkah pertama yaitu ambil data yang sudah di acak barusan menggunakan sklearn</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menggabungkan data X_train dan y_train</span>
+<span class="n">train_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan data gabungan</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">train_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     SepalLengthCm  SepalWidthCm  PetalLengthCm  PetalWidthCm          Species
+130            7.4           2.8            6.1           1.9   Iris-virginica
+119            6.0           2.2            5.0           1.5   Iris-virginica
+29             4.7           3.2            1.6           0.2      Iris-setosa
+0              5.1           3.5            1.4           0.2      Iris-setosa
+62             6.0           2.2            4.0           1.0  Iris-versicolor
+..             ...           ...            ...           ...              ...
+17             5.1           3.5            1.4           0.3      Iris-setosa
+98             5.1           2.5            3.0           1.1  Iris-versicolor
+66             5.6           3.0            4.5           1.5  Iris-versicolor
+126            6.2           2.8            4.8           1.8   Iris-virginica
+109            7.2           3.6            6.1           2.5   Iris-virginica
+
+[120 rows x 5 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<p>kode diatas digunakan untuk menyatukan data xtrain(fitur iris) dan ytrain(kelas iris) semua data iris, dan kode dibawah adalah kode untuk convert data menjadi excel</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Misalkan Anda memiliki output data dalam bentuk list of dictionaries</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">train_data</span>
+
+<span class="c1"># Konversi list of dictionaries ke DataFrame Pandas</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Tentukan nama file Excel yang ingin Anda tulis</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s2">&quot;output_data.xlsx&quot;</span>
+
+<span class="c1"># Tulis DataFrame ke file Excel</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data berhasil ditulis ke file Excel:&quot;</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil ditulis ke file Excel: output_data.xlsx
+</pre></div>
+</div>
+</div>
+</div>
+<p>Setelah data didapatkan maka lakukan etelahnya tentukan input data yang terdiri dari sepalLength, sepalWidth, petalLength, dan petalWidth
+pada contoh kali ini aku mengisinya dengan [5,2,4,1]
+kemudian lakukan perapian data (mengumpulkan data sesuai dengan kelas)
+jika sudah dilakukan perapian maka lakukan perhitungan pada fitur disetiap kelas
+yang dihitung adalah</p>
+<ol class="arabic simple">
+<li><p>rata-rata</p></li>
+<li><p>standar deviasi</p></li>
+<li><p>distribusi Gaussian untuk rumusnya yaitu :
+<span class="math notranslate nohighlight">\(P(A|H)=\frac{1}{\sqrt{2\pi \sigma _{y}^{2}}}exp(-\frac{(x_{i}-\mu _{y})^{2}}{2\sigma _{y}^{2}})\)</span>
+<img alt="alt text" src="work/untitled/gaussian.png" />
+kemudian jika didapatkan seluruhnya maka cari probabilitas dari setiap data, untuk rumusnya yaitu :
+<span class="math notranslate nohighlight">\(p(a)=\frac{n(a))}{N}\)</span>
+P(a) : probabilitas
+n(a) : banyaknya record data train pada suatu kelas
+N : total banyaknya record data train
+<img alt="alt text" src="work/untitled/probabilitas.png" />
+kemudian jika nilai probabilitas dan gaussian sudah ditemukan maka dilanjutkan dengan menghitung posteriori untuk rumusnya yaitu :
+<span class="math notranslate nohighlight">\( posteriori=P(a)\ast P(A|Hi)\)</span>
+<img alt="alt text" src="work/untitled/posteriori.png" />
+kemudian dari posteriori tersebut cari nilai terbesarnya, pada tabel tersebut nilai terbeasr terdapat pada fitur versicolor</p></li>
+</ol>
 <a style='text-decoration:none;line-height:16px;display:flex;color:#5B5B62;padding:10px;justify-content:end;' href='https://deepnote.com?utm_source=created-in-deepnote-cell&projectId=93c1ba3c-3b6e-4b74-9706-ba3a58b65196' target="_blank">
 <img alt='Created in deepnote.com' style='display:inline;max-height:16px;margin:0px;margin-right:7.5px;' src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iODBweCIgaGVpZ2h0PSI4MHB4IiB2aWV3Qm94PSIwIDAgODAgODAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU0LjEgKDc2NDkwKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5Hcm91cCAzPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IkxhbmRpbmciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJBcnRib2FyZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMzUuMDAwMDAwLCAtNzkuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjM1LjAwMDAwMCwgNzkuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iUGF0aC0yMCIgZmlsbD0iIzAyNjVCNCIgcG9pbnRzPSIyLjM3NjIzNzYyIDgwIDM4LjA0NzY2NjcgODAgNTcuODIxNzgyMiA3My44MDU3NTkyIDU3LjgyMTc4MjIgMzIuNzU5MjczOSAzOS4xNDAyMjc4IDMxLjY4MzE2ODMiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0zNS4wMDc3MTgsODAgQzQyLjkwNjIwMDcsNzYuNDU0OTM1OCA0Ny41NjQ5MTY3LDcxLjU0MjI2NzEgNDguOTgzODY2LDY1LjI2MTk5MzkgQzUxLjExMjI4OTksNTUuODQxNTg0MiA0MS42NzcxNzk1LDQ5LjIxMjIyODQgMjUuNjIzOTg0Niw0OS4yMTIyMjg0IEMyNS40ODQ5Mjg5LDQ5LjEyNjg0NDggMjkuODI2MTI5Niw0My4yODM4MjQ4IDM4LjY0NzU4NjksMzEuNjgzMTY4MyBMNzIuODcxMjg3MSwzMi41NTQ0MjUgTDY1LjI4MDk3Myw2Ny42NzYzNDIxIEw1MS4xMTIyODk5LDc3LjM3NjE0NCBMMzUuMDA3NzE4LDgwIFoiIGlkPSJQYXRoLTIyIiBmaWxsPSIjMDAyODY4Ij48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMCwzNy43MzA0NDA1IEwyNy4xMTQ1MzcsMC4yNTcxMTE0MzYgQzYyLjM3MTUxMjMsLTEuOTkwNzE3MDEgODAsMTAuNTAwMzkyNyA4MCwzNy43MzA0NDA1IEM4MCw2NC45NjA0ODgyIDY0Ljc3NjUwMzgsNzkuMDUwMzQxNCAzNC4zMjk1MTEzLDgwIEM0Ny4wNTUzNDg5LDc3LjU2NzA4MDggNTMuNDE4MjY3Nyw3MC4zMTM2MTAzIDUzLjQxODI2NzcsNTguMjM5NTg4NSBDNTMuNDE4MjY3Nyw0MC4xMjg1NTU3IDM2LjMwMzk1NDQsMzcuNzMwNDQwNSAyNS4yMjc0MTcsMzcuNzMwNDQwNSBDMTcuODQzMDU4NiwzNy43MzA0NDA1IDkuNDMzOTE5NjYsMzcuNzMwNDQwNSAwLDM3LjczMDQ0MDUgWiIgaWQ9IlBhdGgtMTkiIGZpbGw9IiMzNzkzRUYiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+' > </img>
 Created in <span style='font-weight:600;margin-left:4px;'>Deepnote</span></a></section>
@@ -2360,6 +2566,12 @@ Created in <span style='font-weight:600;margin-left:4px;'>Deepnote</span></a></s
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-manual-locak-outlier-factor">Menghitung manual Locak Outlier Factor</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-menggunakan-python-scikit-learn">Menghitung menggunakan python(Scikit Learn)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-local-outlier-factor-pada-data-iris">Implementasi Local Outlier Factor pada data iris</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-gaussian-bayes">Metode gaussian bayes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">pengertian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-menggunakan-sklearn">Implementasi menggunakan sklearn</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-manual-menggunakan-excel">Perhitungan manual menggunakan excel</a></li>
 </ul>
 </li>
 </ul>
